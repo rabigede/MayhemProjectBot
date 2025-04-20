@@ -16,7 +16,7 @@ class Config:
 
 def load_config(path: str | None = None) -> Config:
     load_dotenv()
-    admin_ids = [int(id_.strip()) for id_ in os.getenv('ADMIN_IDS').split(',')]  # Преобразуем строку в список int
+    admin_ids = [int(id_.strip()) for id_ in os.getenv('ADMIN_IDS').split(',')]
     return Config(
         tg_bot=TgBot(
             token=os.getenv('BOT_TOKEN'),

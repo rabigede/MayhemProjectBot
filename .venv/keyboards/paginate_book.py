@@ -42,7 +42,7 @@ def split_text(text: str, max_chars: int) -> list[str]:
     """Разбивает текст на страницы по количеству символов, обрывая только на двойных переносах"""
     pages = []
     current_page = ""
-    paragraphs = text.strip().split('\n\n')  # Разбиваем по двойным переносам
+    paragraphs = text.strip().split('\n\n')
 
     for para in paragraphs:
         if len(current_page) + len(para) + 2 <= max_chars:

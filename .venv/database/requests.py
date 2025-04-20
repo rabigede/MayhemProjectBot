@@ -331,11 +331,6 @@ async def get_all_chat_ids() -> Tuple[int, ...]:
         print(f"Ошибка при получении chat_ids: {e}")
         return tuple()
 
-# add_user(3, 489, "GOSHA", 100)
-# increase_balance(3, 156848)
-# add_task('this is the new task. Are you happy of this?', 'DHFEAHYVBJAVE')
-# print(get_random_task_id())
-# print(get_balance(1333))
 async def get_all_users_data() -> List[Dict]:
     async with aiosqlite.connect(DATABASE_FILE) as db:
         # Устанавливаем row_factory для доступа к колонкам по имени
